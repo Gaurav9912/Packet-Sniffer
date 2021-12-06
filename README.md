@@ -5,3 +5,10 @@ Following Protocols were used:
   *ICMP Protocol
   *TCP Protocol
   *UDP Protocol
+  
+ the modules used were : 
+ struct
+ textwrap
+ colorama
+ argparse
+ os
