@@ -7,8 +7,7 @@ import os
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-v", "--verbose_level",
-                    help="Verbose 1 shows basic info about the packets; Verbose 2 shows payload along with basic info")
+parser.add_argument("-v", "--verbose_level",help="Verbose 1 shows basic info about the packets; Verbose 2 shows payload along with basic info")
 parser.add_argument("-o", "--output", help="Saves the Packets to the mentioned file")
 
 # Reading args
@@ -192,8 +191,7 @@ def tcp_segment(data):
     flag_rst = (offset_reversed_flags & 4) >> 2
     flag_syn = (offset_reversed_flags & 2) >> 1
     flag_fin = offset_reversed_flags & 1
-    return src_port, dst_port, sequence, acknowledgement, flag_urg, flag_ack, flag_psh, flag_rst, flag_syn, flag_fin, data[
-                                                                                                                      offset:]
+    return src_port, dst_port, sequence, acknowledgement, flag_urg, flag_ack, flag_psh, flag_rst, flag_syn, flag_fin, data[offset:]
 
 
 # dismantling a UDP packet
